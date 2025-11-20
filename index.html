@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Accident Report Website – User Journey</title>
+    <title>Accident Report Platform – MVP Blueprint</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,23 +22,23 @@
       >
         <!-- Header -->
         <header
-          class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-4 sm:mb-6"
+          class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-4 sm:mb-5"
         >
           <div class="space-y-1">
             <p
               class="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-sky-500"
             >
-              Accident Report Platform
+              Accident Report Platform · MVP
             </p>
             <h1
               class="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-slate-900"
             >
-              User Journey – From First Search to Legal Routing
+              AI-First Accident Report Project Blueprint
             </h1>
             <p class="text-xs sm:text-sm text-slate-600 max-w-2xl">
-              Hover over a stage on the left (or focus it with the keyboard) to
-              see exactly what happens there and why it matters for users and
-              our agency.
+              A product concept for capturing post-accident intent, delivering
+              high-value report assistance, and routing qualified leads to
+              sponsoring personal injury firms.
             </p>
           </div>
           <div
@@ -53,8 +53,240 @@
           </div>
         </header>
 
-        <!-- Content area -->
-        <section class="flex-1 flex gap-4 sm:gap-6 overflow-hidden">
+        <!-- Tabs -->
+        <nav
+          class="mb-4 border-b border-slate-200 text-xs sm:text-sm flex gap-3 overflow-x-auto"
+        >
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-700 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="overview"
+            data-active="true"
+          >
+            Overview
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-500 hover:text-slate-800 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="journey"
+          >
+            User Journey
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-500 hover:text-slate-800 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="tech"
+          >
+            Tech Stack
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-500 hover:text-slate-800 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="data"
+          >
+            Data Strategy
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-500 hover:text-slate-800 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="business"
+          >
+            Business Model
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="tab-btn relative pb-2 font-medium text-slate-500 hover:text-slate-800 data-[active=true]:text-sky-700 whitespace-nowrap"
+            data-tab="roadmap"
+          >
+            Roadmap
+            <span
+              class="pointer-events-none absolute inset-x-0 -bottom-[1px] h-[2px] rounded-full bg-sky-500 opacity-0 data-[active=true]:opacity-100"
+            ></span>
+          </button>
+        </nav>
+
+        <!-- TAB: OVERVIEW -->
+        <section
+          id="tab-overview"
+          class="flex-1 flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden"
+        >
+          <!-- Left column: narrative -->
+          <div
+            class="flex-1 rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-6 sm:py-5 flex flex-col gap-3"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1"
+              >
+                Project summary
+              </p>
+              <h2 class="text-base sm:text-lg font-semibold text-slate-900">
+                What this product is
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700">
+              A web platform that helps people quickly find and understand their
+              accident or police reports after a crash, while quietly qualifying
+              and routing high-intent cases to sponsoring personal injury firms.
+              It's designed as an AI-first, SEO-driven owned asset for our
+              agency.
+            </p>
+
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-1">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-4 py-3 text-[11px] sm:text-xs text-slate-700"
+              >
+                <h3 class="font-semibold text-slate-900 mb-1">
+                  Primary users
+                </h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Drivers, passengers, and families after a crash.</li>
+                  <li>
+                    People told by police, insurers, or employers that they
+                    "need the report."
+                  </li>
+                  <li>
+                    Later: attorneys, journalists, and safety teams consuming
+                    aggregated insights.
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-4 py-3 text-[11px] sm:text-xs text-slate-700"
+              >
+                <h3 class="font-semibold text-slate-900 mb-1">
+                  Core business goals
+                </h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>
+                    Capture post-accident search traffic before competitors.
+                  </li>
+                  <li>
+                    Turn "how do I get my report?" visits into qualified PI
+                    leads.
+                  </li>
+                  <li>
+                    Generate proprietary accident data for content, dashboards,
+                    and client pitches.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="rounded-2xl bg-white border border-slate-200 px-4 py-3 text-[11px] sm:text-xs text-slate-700"
+            >
+              <h3 class="font-semibold text-slate-900 mb-1">
+                What the MVP actually does
+              </h3>
+              <ol class="list-decimal list-inside space-y-1.5">
+                <li>
+                  Guides the user through a simple wizard: location, date,
+                  accident type, and rough intersection.
+                </li>
+                <li>
+                  Suggests matching incidents (or falls back gracefully) and
+                  captures role, injury status, and contact details.
+                </li>
+                <li>
+                  Shows a report status screen (instant, pending, or "here's how
+                  to request it") plus an optional attorney CTA.
+                </li>
+                <li>
+                  Stores structured data we can use for SEO pages, trend
+                  reports, and pitch-ready dashboards.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Right column: quick-reference cards -->
+          <div
+            class="w-full sm:w-60 lg:w-72 flex-shrink-0 flex flex-col gap-3 text-[11px] sm:text-xs"
+          >
+            <div
+              class="rounded-2xl bg-sky-50 border border-sky-100 px-4 py-3 text-slate-800"
+            >
+              <h3 class="font-semibold text-slate-900 mb-1">
+                Why this matters for the agency
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>
+                  Demonstrates an "AI-first" acquisition play we fully own, not
+                  just ad campaigns.
+                </li>
+                <li>
+                  Lets us walk into a market (e.g., Denver) already holding real
+                  traffic and leads.
+                </li>
+                <li>
+                  Supports the 2026 AI-first rebrand with tangible product
+                  assets, not just decks.
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="rounded-2xl bg-white border border-slate-200 px-4 py-3 text-slate-700"
+            >
+              <h3 class="font-semibold text-slate-900 mb-1">
+                MVP scope (Phase 1)
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Single state / metro focus (e.g., Colorado / Denver).</li>
+                <li>
+                  Wizard UX + basic incident "matching" (even if manually or
+                  via lightweight feeds at first).
+                </li>
+                <li>
+                  Simple email/SMS notifications and exportable lead feed for
+                  partner firms.
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="rounded-2xl bg-white border border-slate-200 px-4 py-3 text-slate-700"
+            >
+              <h3 class="font-semibold text-slate-900 mb-1">
+                Future directions
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>
+                  Deeper integrations with public APIs and traffic cameras.
+                </li>
+                <li>
+                  Workplace injuries, premises liability, and other verticals.
+                </li>
+                <li>
+                  City-level dashboards: "dangerous intersections" &
+                  real-time heatmaps used for PR + link building.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: USER JOURNEY -->
+        <section
+          id="tab-journey"
+          class="hidden flex-1 flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden"
+        >
           <!-- Left: steps list -->
           <aside
             class="w-40 sm:w-56 lg:w-64 flex-shrink-0 flex flex-col gap-2 sm:gap-3 overflow-hidden"
@@ -71,7 +303,6 @@
               id="stepsList"
               class="flex-1 flex flex-col gap-2 sm:gap-3 overflow-hidden"
             >
-              <!-- Each button: data-step attribute matches detail panel -->
               <button
                 type="button"
                 class="step-btn group flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-3 py-2.5 text-left text-[11px] sm:text-xs shadow-sm hover:border-sky-300 hover:bg-sky-50/70 focus:outline-none focus:ring-2 focus:ring-sky-400"
@@ -225,7 +456,6 @@
           <section
             class="flex-1 rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-6 sm:py-5 shadow-inner overflow-hidden"
           >
-            <!-- Detail sections -->
             <div
               id="detail-1"
               class="detail-panel h-full flex flex-col gap-3"
@@ -553,14 +783,656 @@
           </section>
         </section>
 
+        <!-- TAB: TECH STACK -->
+        <section
+          id="tab-tech"
+          class="hidden flex-1 flex flex-col gap-4 overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1 overflow-y-auto">
+            <!-- Frontend -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Core stack</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Frontend & UX</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Framework</h3>
+                  <p class="text-slate-700 mb-2">Next.js 14+ with React 18 for SSR/SSG, optimal SEO, and fast page loads.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Server components for performance</li>
+                    <li>App router for modern routing</li>
+                    <li>Edge middleware for geo-detection</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">UI Layer</h3>
+                  <p class="text-slate-700 mb-2">Tailwind CSS + Radix UI primitives for accessible, production-ready components.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>shadcn/ui for base components</li>
+                    <li>Framer Motion for wizard transitions</li>
+                    <li>React Hook Form + Zod validation</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Maps & Location</h3>
+                  <p class="text-slate-700 mb-2">Mapbox GL for interactive incident visualization and location selection.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Geocoding for address → coordinates</li>
+                    <li>Reverse geocoding for click-to-select</li>
+                    <li>Heatmap layers for crash density</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Server side</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Backend & APIs</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">API Layer</h3>
+                  <p class="text-slate-700 mb-2">Next.js API routes + tRPC for type-safe client-server communication.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Serverless functions on Vercel Edge</li>
+                    <li>Rate limiting via Upstash Redis</li>
+                    <li>Webhooks for async processing</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Database</h3>
+                  <p class="text-slate-700 mb-2">Supabase (Postgres) for structured data with real-time subscriptions.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Prisma ORM for type-safe queries</li>
+                    <li>Row-level security (RLS) policies</li>
+                    <li>PostGIS for spatial queries</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">AI & Matching</h3>
+                  <p class="text-slate-700 mb-2">OpenAI API for fuzzy incident matching and query understanding.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Embeddings for semantic search</li>
+                    <li>GPT-4 for address parsing</li>
+                    <li>Langchain for agentic workflows</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Hosting & ops</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Infrastructure</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Deployment</h3>
+                  <p class="text-slate-700 mb-2">Vercel for frontend, Supabase for backend, Cloudflare for CDN/DDoS.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>GitHub Actions for CI/CD</li>
+                    <li>Preview deployments per PR</li>
+                    <li>Edge caching for static pages</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Observability</h3>
+                  <p class="text-slate-700 mb-2">Sentry for errors, Vercel Analytics for performance, PostHog for product metrics.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Real User Monitoring (RUM)</li>
+                    <li>Funnel drop-off tracking</li>
+                    <li>Custom event logging</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Security</h3>
+                  <p class="text-slate-700 mb-2">Clerk for auth, Arcjet for bot protection, Stripe for secure payments.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>CAPTCHA on high-risk forms</li>
+                    <li>SSL/TLS everywhere (A+ rating)</li>
+                    <li>GDPR/CCPA compliance tooling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrations -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Third party</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Key Integrations</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Incident Data Sources</h3>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Police department APIs (NIBRS, CAD feeds)</li>
+                    <li>State DOT crash databases</li>
+                    <li>Social listening (Twitter, news scraping)</li>
+                    <li>Traffic camera feeds (future)</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Communication</h3>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Resend for transactional email</li>
+                    <li>Twilio for SMS notifications</li>
+                    <li>Intercom for live chat support</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Legal Partner Tools</h3>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Zapier → Clio/Filevine CRMs</li>
+                    <li>Webhook delivery for real-time leads</li>
+                    <li>CSV export for bulk intake</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">SEO & Analytics</h3>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Google Search Console API</li>
+                    <li>Ahrefs/Semrush for competitive intel</li>
+                    <li>Schema.org markup automation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: DATA STRATEGY -->
+        <section
+          id="tab-data"
+          class="hidden flex-1 flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden"
+        >
+          <!-- Left: SEO Engine -->
+          <div class="flex-1 rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3 overflow-y-auto">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Organic acquisition</p>
+              <h2 class="text-base sm:text-lg font-semibold text-slate-900">SEO Content Engine</h2>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700">
+              Programmatic SEO at scale: turning structured accident data into thousands of indexed, rankable pages.
+            </p>
+            <div class="space-y-3 text-[11px] sm:text-xs">
+              <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                <h3 class="font-semibold text-slate-900 mb-1.5">Real-Time Accident Pages</h3>
+                <p class="text-slate-700 mb-2">Individual landing pages for each incident we ingest, indexed within hours.</p>
+                <ul class="list-disc list-inside text-slate-600 space-y-1">
+                  <li>URL: /accidents/denver/i25-speer-blvd-2024-03-15</li>
+                  <li>H1: "Car Accident at I-25 & Speer Blvd, Denver – March 15, 2024"</li>
+                  <li>AI-generated summary, map embed, related incidents carousel</li>
+                  <li>Schema.org Event markup for SERP features</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                <h3 class="font-semibold text-slate-900 mb-1.5">Location Hub Pages</h3>
+                <p class="text-slate-700 mb-2">City/county aggregation pages that rank for "[city] accident reports".</p>
+                <ul class="list-disc list-inside text-slate-600 space-y-1">
+                  <li>/denver-accident-reports, /boulder-accident-reports</li>
+                  <li>Stats block: "247 crashes this month, 18% increase YoY"</li>
+                  <li>Dangerous intersections list with heatmap</li>
+                  <li>FAQ section: "How long does it take to get a report in Denver?"</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                <h3 class="font-semibold text-slate-900 mb-1.5">How-To & Educational Content</h3>
+                <p class="text-slate-700 mb-2">Long-form guides targeting BOFU queries with high commercial intent.</p>
+                <ul class="list-disc list-inside text-slate-600 space-y-1">
+                  <li>"How to Get Your Accident Report in Colorado (2024 Guide)"</li>
+                  <li>"What to Do After a Car Accident: A Step-by-Step Checklist"</li>
+                  <li>"Police Report vs Accident Report: What's the Difference?"</li>
+                  <li>Internal links to wizard CTA + local attorney partners</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                <h3 class="font-semibold text-slate-900 mb-1.5">Automated Content Refresh</h3>
+                <p class="text-slate-700 mb-2">GPT-powered updates keep pages fresh and competitive.</p>
+                <ul class="list-disc list-inside text-slate-600 space-y-1">
+                  <li>Monthly stat refreshes: "Updated March 2024"</li>
+                  <li>Dynamic "recent accidents" widget</li>
+                  <li>Seasonal trends: "Winter driving accidents spike 34% in Denver"</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Analytics & Data Collection -->
+          <div class="w-full sm:w-72 lg:w-80 flex-shrink-0 flex flex-col gap-3 text-[11px] sm:text-xs overflow-y-auto">
+            <div class="rounded-2xl bg-sky-50 border border-sky-100 px-4 py-3">
+              <h3 class="font-semibold text-slate-900 mb-1.5">Data We Capture</h3>
+              <ul class="list-disc list-inside text-slate-700 space-y-1">
+                <li>Incident metadata (time, location, severity, vehicles)</li>
+                <li>User journey (source, pages viewed, wizard drop-off)</li>
+                <li>Lead qualification (injury, rep status, contact consent)</li>
+                <li>Geo patterns (zip code, IP, device location)</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+              <h3 class="font-semibold text-slate-900 mb-1.5">Analytics Stack</h3>
+              <ul class="list-disc list-inside text-slate-700 space-y-1">
+                <li>PostHog for product analytics & funnels</li>
+                <li>Google Analytics 4 for standard reporting</li>
+                <li>Hotjar for heatmaps & session replay</li>
+                <li>Custom dashboards in Supabase</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+              <h3 class="font-semibold text-slate-900 mb-1.5">SEO Monitoring</h3>
+              <ul class="list-disc list-inside text-slate-700 space-y-1">
+                <li>Ahrefs for backlink tracking</li>
+                <li>Google Search Console for impressions/CTR</li>
+                <li>Automated rank tracking (top 100 keywords)</li>
+                <li>Competitor gap analysis (monthly reports)</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+              <h3 class="font-semibold text-slate-900 mb-1.5">Data Products We Can Build</h3>
+              <ul class="list-disc list-inside text-slate-700 space-y-1">
+                <li><strong>Crash Heatmaps:</strong> City dashboards showing dangerous zones</li>
+                <li><strong>Trend Reports:</strong> "Denver saw 23% more rear-end crashes in Q1"</li>
+                <li><strong>PR Assets:</strong> "Most dangerous intersections in Colorado"</li>
+                <li><strong>Client Pitches:</strong> "We own 12K monthly searches in your market"</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+              <h3 class="font-semibold text-slate-900 mb-1.5">Privacy & Compliance</h3>
+              <p class="text-slate-700 mb-2">We only publish data already in public record, anonymized and aggregated.</p>
+              <ul class="list-disc list-inside text-slate-600 space-y-1">
+                <li>No PII in SEO content (no names, plates, etc.)</li>
+                <li>Cookie consent banner (OneTrust or similar)</li>
+                <li>GDPR right-to-deletion workflow</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: BUSINESS MODEL -->
+        <section
+          id="tab-business"
+          class="hidden flex-1 flex flex-col gap-4 overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1 overflow-y-auto">
+            <!-- Revenue Streams -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Monetization</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Revenue Streams</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">1. Lead Generation (Primary)</h3>
+                  <p class="text-slate-700 mb-2">Pay-per-qualified-lead model for sponsoring PI firms.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li><strong>Pricing:</strong> $200–$500 per qualified lead (injured, unrepresented)</li>
+                    <li><strong>Volume:</strong> 50–150 leads/month per metro at scale</li>
+                    <li><strong>Revenue:</strong> $10K–$75K/month per market</li>
+                    <li>Exclusive territory deals for premium pricing</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">2. Premium Report Access (Secondary)</h3>
+                  <p class="text-slate-700 mb-2">Freemium model: basic info free, full report + perks for $29–$49.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Instant PDF delivery (vs 3–7 day wait)</li>
+                    <li>Redaction service (remove personal info)</li>
+                    <li>Multi-format export (PDF, Word, plaintext)</li>
+                    <li>Estimated 5–10% conversion on free users</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">3. Data Licensing (Future)</h3>
+                  <p class="text-slate-700 mb-2">Sell aggregated insights to insurers, city planners, and journalists.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>API access: $500–$2K/month per enterprise user</li>
+                    <li>Custom dashboards for city DOTs</li>
+                    <li>Quarterly trend reports for insurers</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">4. SaaS for Law Firms (Future)</h3>
+                  <p class="text-slate-700 mb-2">White-label version for firms to run their own branded report tool.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>$499–$999/month per firm</li>
+                    <li>Custom branding + domain</li>
+                    <li>CRM integration included</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Partnership Model -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Go-to-market</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Partnership Strategy</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">PI Firm Sponsors</h3>
+                  <p class="text-slate-700 mb-2">Launch partner in each metro; exclusive or multi-sponsor tiers.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li><strong>Tier 1 (Exclusive):</strong> $5K/month + $300/lead, single firm per metro</li>
+                    <li><strong>Tier 2 (Shared):</strong> $2K/month + $400/lead, up to 3 firms rotating</li>
+                    <li>Firms get custom landing pages, co-branded emails, priority routing</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Tow Companies & Body Shops</h3>
+                  <p class="text-slate-700 mb-2">On-scene QR codes and printed cards that drive users to our platform.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Rev-share: $10 per lead generated via their referral code</li>
+                    <li>Co-marketing: "Scan here to get your accident report instantly"</li>
+                    <li>Branded cards in tow truck glove boxes</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Insurance Adjusters</h3>
+                  <p class="text-slate-700 mb-2">They already tell claimants "go get the police report." Why not send them to us?</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>White-label portal for major carriers</li>
+                    <li>API integration for bulk report retrieval</li>
+                    <li>Affiliate fee when users upgrade to premium</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Agency Upsell</h3>
+                  <p class="text-slate-700 mb-2">Use this platform as a wedge to sell PI firms our core SEO/PPC services.</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>"We're already driving 500 accident-related visits/month in your city"</li>
+                    <li>"Let us also manage your Google Ads and website redesign"</li>
+                    <li>Platform becomes proof of our AI-first, data-driven approach</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unit Economics -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Economics</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Unit Economics (MVP)</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Cost per Lead (CPL)</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>SEO content production: ~$15/lead (amortized)</li>
+                    <li>AI/API costs (matching, GPT): ~$2/lead</li>
+                    <li>Hosting/infra (Vercel, Supabase): ~$1/lead</li>
+                    <li><strong>Total CPL: ~$18</strong></li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Revenue per Lead (RPL)</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Average payout from PI firm: $300</li>
+                    <li>Premium report upsells: +$5 avg (10% × $49)</li>
+                    <li><strong>Total RPL: ~$305</strong></li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl bg-emerald-50 border border-emerald-200 px-4 py-3">
+                  <h3 class="font-semibold text-emerald-900 mb-1.5">Gross Margin per Lead</h3>
+                  <p class="text-2xl font-bold text-emerald-700">$287</p>
+                  <p class="text-slate-700 text-xs mt-1">94% margin · Very healthy for a lead-gen business</p>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 px-4 py-3">
+                  <h3 class="font-semibold text-slate-900 mb-1.5">Break-even Target</h3>
+                  <p class="text-slate-700 mb-2">Need ~35 qualified leads/month to cover $10K in fixed costs (team, tools).</p>
+                  <ul class="list-disc list-inside text-slate-600 space-y-1">
+                    <li>Single market (Denver) at scale: 100–150 leads/month</li>
+                    <li>Profitable within 90 days of launch if SEO ramp is strong</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Risks & Mitigations -->
+            <div class="rounded-3xl bg-slate-50 border border-slate-200 px-4 py-4 sm:px-5 sm:py-5 flex flex-col gap-3">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.18em] text-sky-500 mb-1">Considerations</p>
+                <h2 class="text-base sm:text-lg font-semibold text-slate-900">Risks & Mitigations</h2>
+              </div>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="rounded-2xl bg-rose-50 border border-rose-200 px-4 py-3">
+                  <h3 class="font-semibold text-rose-900 mb-1.5">Risk: Data Access Limitations</h3>
+                  <p class="text-slate-700 mb-2">Some jurisdictions don't have public APIs or real-time feeds.</p>
+                  <p class="text-slate-600"><strong>Mitigation:</strong> Focus MVP on states with open data (CO, TX, FL). Manual scraping + social listening fills gaps until APIs available.</p>
+                </div>
+                <div class="rounded-2xl bg-rose-50 border border-rose-200 px-4 py-3">
+                  <h3 class="font-semibold text-rose-900 mb-1.5">Risk: SEO Takes 6–12 Months</h3>
+                  <p class="text-slate-700 mb-2">Organic traffic won't be instant; need runway to prove concept.</p>
+                  <p class="text-slate-600"><strong>Mitigation:</strong> Pair with paid ads (Google, Meta) for immediate lead flow while SEO ramps. Use existing agency client budgets to test.</p>
+                </div>
+                <div class="rounded-2xl bg-rose-50 border border-rose-200 px-4 py-3">
+                  <h3 class="font-semibold text-rose-900 mb-1.5">Risk: Partner Churn</h3>
+                  <p class="text-slate-700 mb-2">PI firms may drop out if lead quality or volume isn't consistent.</p>
+                  <p class="text-slate-600"><strong>Mitigation:</strong> Multi-sponsor model ensures we're not dependent on one firm. Transparent reporting dashboards build trust.</p>
+                </div>
+                <div class="rounded-2xl bg-rose-50 border border-rose-200 px-4 py-3">
+                  <h3 class="font-semibold text-rose-900 mb-1.5">Risk: Competitor Copycat</h3>
+                  <p class="text-slate-700 mb-2">Other agencies or legal tech companies could clone the model.</p>
+                  <p class="text-slate-600"><strong>Mitigation:</strong> First-mover advantage in SEO (domain authority compounds). Proprietary incident data and AI matching create moats over time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: ROADMAP -->
+        <section
+          id="tab-roadmap"
+          class="hidden flex-1 flex flex-col gap-4 overflow-hidden"
+        >
+          <div class="flex-1 overflow-y-auto space-y-4">
+            <!-- Phase 1 -->
+            <div class="rounded-3xl bg-gradient-to-br from-sky-50 to-slate-50 border border-sky-200 px-5 py-5 sm:px-6 sm:py-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-sky-600 mb-1">Q2 2024 · 8–10 weeks</p>
+                  <h2 class="text-lg sm:text-xl font-semibold text-slate-900">Phase 1: MVP Launch (Single Market)</h2>
+                </div>
+                <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-[10px] font-semibold text-sky-700 border border-sky-300">
+                  Foundation
+                </span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] sm:text-xs">
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Goals</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Launch in Denver/Colorado as proof of concept</li>
+                    <li>Wizard + incident matching working end-to-end</li>
+                    <li>First 1–2 PI firm partnerships signed</li>
+                    <li>10K monthly organic visits within 90 days</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Deliverables</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Frontend: Next.js wizard, location hub pages</li>
+                    <li>Backend: Supabase DB, incident ingestion pipeline</li>
+                    <li>SEO: 50+ programmatic pages, 10 editorial guides</li>
+                    <li>Integrations: Twilio SMS, Resend email, Zapier → CRM</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Success Metrics</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>25+ qualified leads delivered in first month</li>
+                    <li>15% wizard completion rate (industry avg: 8–12%)</li>
+                    <li>3+ keywords ranking in top 10 for "denver accident report"</li>
+                    <li>Partner NPS ≥ 8/10</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Team</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>1 FT developer (Next.js/React)</li>
+                    <li>1 PT SEO specialist (programmatic pages)</li>
+                    <li>1 PT designer (Figma → Tailwind)</li>
+                    <li>Founder: BD, partnerships, product vision</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="rounded-3xl bg-gradient-to-br from-emerald-50 to-slate-50 border border-emerald-200 px-5 py-5 sm:px-6 sm:py-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-emerald-600 mb-1">Q3 2024 · 12 weeks</p>
+                  <h2 class="text-lg sm:text-xl font-semibold text-slate-900">Phase 2: Multi-Market Expansion</h2>
+                </div>
+                <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-semibold text-emerald-700 border border-emerald-300">
+                  Scale
+                </span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] sm:text-xs">
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Goals</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Expand to 3–5 additional metros (Phoenix, Austin, Tampa, etc.)</li>
+                    <li>Automate incident ingestion from state DOT APIs</li>
+                    <li>Launch premium report tier ($29–$49)</li>
+                    <li>50K monthly visits across all markets</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Deliverables</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Multi-region database schema + geo-routing</li>
+                    <li>Stripe integration for premium tier</li>
+                    <li>Partner dashboard (lead volume, quality scores)</li>
+                    <li>200+ new SEO pages per market</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Success Metrics</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>150+ qualified leads/month total</li>
+                    <li>5% premium conversion rate</li>
+                    <li>$45K MRR from lead gen + premium</li>
+                    <li>10+ active PI firm partners</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Risks to Watch</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>API access varies by state (manual fallback plan ready)</li>
+                    <li>SEO cannibalization if markets too similar</li>
+                    <li>Partner onboarding bottleneck (automate CRM setup)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="rounded-3xl bg-gradient-to-br from-violet-50 to-slate-50 border border-violet-200 px-5 py-5 sm:px-6 sm:py-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-violet-600 mb-1">Q4 2024 · Ongoing</p>
+                  <h2 class="text-lg sm:text-xl font-semibold text-slate-900">Phase 3: Product Expansion & Data Monetization</h2>
+                </div>
+                <span class="inline-flex items-center rounded-full bg-violet-100 px-3 py-1 text-[10px] font-semibold text-violet-700 border border-violet-300">
+                  Innovation
+                </span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] sm:text-xs">
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Goals</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Launch adjacent verticals (workplace injuries, slip-and-fall)</li>
+                    <li>Public crash dashboards for PR/link building</li>
+                    <li>White-label SaaS for law firms</li>
+                    <li>Data licensing to insurers/city planners</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Deliverables</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>Interactive heatmap dashboard (Mapbox + D3.js)</li>
+                    <li>API access tier for enterprise customers</li>
+                    <li>Multi-tenant architecture for white-label</li>
+                    <li>Workplace injury wizard (OSHA data integration)</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Success Metrics</h3>
+                  <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li>$100K+ MRR across all revenue streams</li>
+                    <li>3–5 white-label customers paying $999/mo</li>
+                    <li>500K+ monthly visits (10+ markets)</li>
+                    <li>Featured in national news outlet for crash data</li>
+                  </ul>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="font-semibold text-slate-900">Long-term Vision</h3>
+                  <p class="text-slate-700">
+                    Become the de facto source for real-time accident intelligence in the US. Not just a lead-gen tool, but a
+                    data platform that insurers, journalists, city planners, and safety advocates rely on.
+                    The "Bloomberg Terminal" for crash data.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestones Timeline -->
+            <div class="rounded-3xl bg-white border border-slate-200 px-5 py-5 sm:px-6 sm:py-6">
+              <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-4">Key Milestones</h3>
+              <div class="space-y-3 text-[11px] sm:text-xs">
+                <div class="flex gap-4 items-start">
+                  <div class="w-20 flex-shrink-0 font-semibold text-slate-600">Week 4</div>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">MVP wizard live on staging</p>
+                    <p class="text-slate-600">Internal testing, first PI partner demo</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <div class="w-20 flex-shrink-0 font-semibold text-slate-600">Week 8</div>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">Public launch in Denver</p>
+                    <p class="text-slate-600">Press release, social push, initial SEO indexing</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <div class="w-20 flex-shrink-0 font-semibold text-slate-600">Week 12</div>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">First 50 qualified leads delivered</p>
+                    <p class="text-slate-600">Validate unit economics, gather partner feedback</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <div class="w-20 flex-shrink-0 font-semibold text-slate-600">Week 20</div>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">Break-even on first market</p>
+                    <p class="text-slate-600">Revenue > fixed costs, ready to scale</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <div class="w-20 flex-shrink-0 font-semibold text-slate-600">Week 32</div>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">5 markets live, $50K MRR</p>
+                    <p class="text-slate-600">Hire dedicated product manager, consider fundraising</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Footer -->
         <footer
           class="mt-3 pt-3 border-t border-slate-200 text-[10px] sm:text-[11px] text-slate-500"
         >
           <p>
-            Note: This page is a static explainer of the UX journey, not the
-            live end-user wizard. Use it in decks, Loom walkthroughs, or as a
-            blueprint when designing the actual product screens.
+            Note: This page is a static explainer of the product concept and UX
+            journey, not the live end-user wizard. Use it in decks, Loom
+            walkthroughs, or as a blueprint when designing the actual product.
           </p>
         </footer>
       </div>
@@ -568,18 +1440,51 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        /* ----- TABS ----- */
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const allTabs = {
+          overview: document.getElementById("tab-overview"),
+          journey: document.getElementById("tab-journey"),
+          tech: document.getElementById("tab-tech"),
+          data: document.getElementById("tab-data"),
+          business: document.getElementById("tab-business"),
+          roadmap: document.getElementById("tab-roadmap")
+        };
+
+        function setTab(tab) {
+          tabButtons.forEach((btn) => {
+            const isActive = btn.dataset.tab === tab;
+            btn.dataset.active = isActive ? "true" : "false";
+          });
+
+          // Hide all tabs
+          Object.values(allTabs).forEach(section => {
+            if (section) section.classList.add("hidden");
+          });
+
+          // Show selected tab
+          if (allTabs[tab]) {
+            allTabs[tab].classList.remove("hidden");
+          }
+        }
+
+        tabButtons.forEach((btn) => {
+          btn.addEventListener("click", () => setTab(btn.dataset.tab));
+        });
+
+        // Default tab: overview
+        setTab("overview");
+
+        /* ----- USER JOURNEY: steps & detail panels ----- */
         const buttons = document.querySelectorAll(".step-btn");
         const panels = document.querySelectorAll(".detail-panel");
 
-        function setActive(step) {
+        function setActiveStep(step) {
           buttons.forEach((btn) => {
-            btn.classList.toggle("active", btn.dataset.step === step);
-            if (btn.dataset.step === step) {
-              btn.classList.add(
-                "border-sky-400",
-                "bg-sky-50/80",
-                "shadow-md"
-              );
+            const isActive = btn.dataset.step === step;
+            btn.classList.toggle("active", isActive);
+            if (isActive) {
+              btn.classList.add("border-sky-400", "bg-sky-50/80", "shadow-md");
             } else {
               btn.classList.remove(
                 "border-sky-400",
@@ -589,19 +1494,19 @@
             }
           });
 
-          panels.forEach((panel, idx) => {
+          panels.forEach((panel) => {
             panel.classList.toggle("hidden", `detail-${step}` !== panel.id);
           });
         }
 
         buttons.forEach((btn) => {
           const step = btn.dataset.step;
-          btn.addEventListener("mouseenter", () => setActive(step));
-          btn.addEventListener("focus", () => setActive(step));
+          btn.addEventListener("mouseenter", () => setActiveStep(step));
+          btn.addEventListener("focus", () => setActiveStep(step));
         });
 
-        // default to stage 1
-        setActive("1");
+        // Default active stage for journey tab
+        setActiveStep("1");
       });
     </script>
   </body>
