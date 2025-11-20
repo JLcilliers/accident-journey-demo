@@ -2,117 +2,156 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Accident Report User Journey – Interactive Flow</title>
+    <title>Accident Report Website – User Journey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Tailwind CDN (fine for internal/demo use) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Mobile: allow "hover" explanation via click/focus as well */
-      .step-card:focus-within .step-details,
-      .step-card:focus .step-details {
+      /* Fallback font if Tailwind fails */
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      /* Let mobile users tap/focus to reveal details */
+      .step-card:focus .step-details,
+      .step-card:focus-within .step-details {
         opacity: 1;
         max-height: 400px;
       }
     </style>
   </head>
-  <body class="bg-slate-100 text-slate-900">
+  <body
+    class="min-h-screen bg-slate-950 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-900"
+  >
     <main class="min-h-screen flex items-center justify-center px-4 py-10">
-      <div class="w-full max-w-6xl bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+      <div
+        class="w-full max-w-6xl rounded-3xl border border-slate-800 bg-slate-950/70 shadow-2xl shadow-slate-950/60 backdrop-blur-xl p-6 sm:p-10"
+      >
         <!-- Header -->
-        <header class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <header
+          class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+        >
           <div>
-            <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight">
-              Accident Report Website – User Journey
+            <p class="text-xs uppercase tracking-[0.2em] text-blue-300 mb-2">
+              Accident Report Platform
+            </p>
+            <h1
+              class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-50"
+            >
+              User Journey – From First Search to Legal Routing
             </h1>
-            <p class="mt-2 text-sm sm:text-base text-slate-600">
-              Hover over each step (or tap on mobile) to see how the flow works for
-              an injured user or family member.
+            <p class="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl">
+              Hover over each stage (or tap on mobile) to see how the product
+              behaves at that point and what value it creates for both the user
+              and our agency.
             </p>
           </div>
-          <div class="flex flex-col items-start sm:items-end gap-2 text-xs text-slate-500">
+          <div
+            class="flex flex-col items-start sm:items-end gap-2 text-xs text-slate-400"
+          >
             <span
-              class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 font-medium text-slate-700"
+              class="inline-flex items-center rounded-full bg-blue-500/10 border border-blue-400/40 px-3 py-1 font-medium text-blue-100 shadow-sm shadow-blue-500/20"
             >
               Internal UX / Strategy Demo
             </span>
-            <span>Built as a single HTML file for GitHub / Vercel sharing.</span>
+            <span class="text-[11px]">
+              Single static HTML · Ready for GitHub Pages or Vercel
+            </span>
           </div>
         </header>
 
-        <!-- Legend / Instructions -->
+        <!-- Instructions / legend -->
         <section
-          class="mb-8 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-700 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between"
+          class="mb-8 rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-xs sm:text-sm text-slate-200 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
         >
           <p>
-            <span class="font-semibold">How to use this page:</span> Move your mouse over a
-            step card to reveal a detailed explanation. On mobile, tap a card and it will expand.
+            <span class="font-semibold text-slate-50">How to read this:</span>
+            Each card is a stage in the journey. The one-line description is
+            always visible; move your mouse over a card (or tap it on mobile) to
+            reveal the deeper explanation and tactics.
           </p>
-          <p class="text-slate-500">
-            Flow is left → right on desktop, top → bottom on mobile.
+          <p class="text-slate-400">
+            The track flows left → right. Scroll horizontally if needed.
           </p>
         </section>
 
-        <!-- Flow container -->
-        <section class="space-y-10">
-          <!-- Row 1: stages overview -->
-          <div class="flex flex-col gap-6 sm:gap-4">
-            <h2 class="text-lg sm:text-xl font-semibold tracking-tight">
-              High-level stages
-            </h2>
-            <p class="text-sm text-slate-600 max-w-3xl">
-              These seven stages map the full experience from first Google search after an
-              accident through to legal routing and long-term data value.
-            </p>
-          </div>
+        <!-- High level intro -->
+        <section class="mb-6">
+          <h2 class="text-sm font-semibold text-slate-100 mb-1">
+            High-level stages
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-3xl">
+            We map the experience from the user's first "how do I get my police
+            report?" search, through guided accident identification, report
+            delivery, and finally routing qualified leads to sponsoring PI
+            firms.
+          </p>
+        </section>
 
-          <!-- Flow map -->
+        <!-- Journey track -->
+        <section class="relative">
+          <!-- Connector line (desktop) -->
           <div
-            class="relative flex flex-col gap-6 sm:flex-row sm:items-stretch sm:justify-between"
-          >
-            <!-- Connector line (desktop only) -->
-            <div
-              class="hidden sm:block absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-slate-200 z-0"
-            ></div>
+            class="pointer-events-none hidden md:block absolute left-6 right-6 top-[76px] h-px bg-gradient-to-r from-blue-500/10 via-slate-700/70 to-blue-500/10"
+          ></div>
 
+          <!-- Scrollable cards -->
+          <div
+            class="flex gap-5 overflow-x-auto pb-2 pt-1 pr-1 snap-x snap-mandatory"
+          >
             <!-- STEP 1 -->
             <article
-              class="step-card relative z-10 flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    1
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Trigger & Awareness
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      First post-accident "I need my report" moment
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-blue-100 border border-blue-400/40"
                 >
-                  1
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Trigger & Awareness
-                  </h3>
-                  <p class="text-xs text-slate-500">Post-accident "how do I get the report?" moment</p>
-                </div>
+                  Stage
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                SEO pages, real-time accident content, or referrals pull them in.
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                SEO content, real-time accident pages, and referrals funnel the
+                user into our experience.
               </p>
 
-              <!-- Details on hover -->
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    User has just had an accident or is helping someone who did (driver, passenger,
-                    family member).
+                    User has recently been in a crash (or is helping a family
+                    member) and is told they'll need an official report.
                   </li>
                   <li>
-                    They Google things like "how to get my accident report in Denver" or "free police
-                    report lookup".
+                    They search things like
+                    <span class="italic"
+                      >"get my accident report Denver"</span
+                    >
+                    or tap a link from a tow truck, insurer, or law firm.
                   </li>
                   <li>
-                    They land on our geo-specific landing page or an incident-specific page driven by
-                    real-time monitoring.
+                    They land on a geo-specific or incident-specific page we
+                    own, powered by AI-generated content and monitoring feeds.
                   </li>
                 </ul>
               </div>
@@ -120,43 +159,53 @@
 
             <!-- STEP 2 -->
             <article
-              class="step-card relative z-10 flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    2
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Landing / Hero Experience
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Clear promise & single CTA: "Find my report"
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-emerald-100 border border-emerald-400/40"
                 >
-                  2
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Landing / Hero Experience
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Clear promise: "Find your accident report in minutes"
-                  </p>
-                </div>
+                  Trust
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                Reassurance, social proof, and a single CTA: "Find my report".
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                The page calms them down, explains the process, and pushes them
+                into the guided search wizard.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    Page explains the 3-step flow: search → confirm incident → get report/guide.
+                    Hero copy: "Find your official accident report in minutes"
+                    with a breakdown of the 3–step flow.
                   </li>
                   <li>
-                    Trust elements: "secure", "no upfront cost", jurisdiction-specific explanation of
-                    how reports work.
+                    Trust badges & local nuance ("In Colorado, reports are
+                    usually ready in 3–7 days…").
                   </li>
                   <li>
-                    Main CTA kicks off the guided wizard; optional AI assistant for natural-language
-                    input ("I crashed on I-25 yesterday…").
+                    Main CTA starts the flow; optional AI assistant lets them
+                    describe the crash in plain language.
                   </li>
                 </ul>
               </div>
@@ -164,44 +213,53 @@
 
             <!-- STEP 3 -->
             <article
-              class="step-card relative z-10 flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    3
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Accident Search Wizard
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Collects just enough data to match incidents
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-purple-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-purple-100 border border-purple-400/40"
                 >
-                  3
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Accident Search Wizard
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Collects basics: state, city, date, type, intersection
-                  </p>
-                </div>
+                  Input
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                Feels guided and forgiving, even when inputs are fuzzy.
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                State, city, date, type, and rough location are gathered in a
+                forgiving, mobile-friendly wizard.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    Minimal fields first: state, city/county, date, type of incident, closest
-                    street/intersection.
+                    Form starts with auto-detected state/city, plus date picker
+                    and incident type.
                   </li>
                   <li>
-                    Smart defaults (e.g., pre-fill state/city from IP), plus messaging that approximate
-                    info is okay.
+                    An open text "closest street / intersection" field captures
+                    messy human input without friction.
                   </li>
                   <li>
-                    Backend/AI in the real MVP would use this to query incident feeds and agency data
-                    for potential matches.
+                    In production, this payload is sent to services scraping
+                    public feeds and agency logs to find likely matches.
                   </li>
                 </ul>
               </div>
@@ -209,92 +267,108 @@
 
             <!-- STEP 4 -->
             <article
-              class="step-card relative z-10 flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    4
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Incident Matching
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      "Does this look like your accident?" list
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-amber-100 border border-amber-400/40"
                 >
-                  4
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Incident Matching
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Show likely accidents and ask "Does this look like yours?"
-                  </p>
-                </div>
+                  Logic
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                Narrows to the specific crash, or falls back gracefully.
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                The system proposes one or more likely crashes, but never
+                dead-ends if there's no perfect match.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    Display 1–3 candidate incidents with time, rough location, and number of vehicles.
+                    Cards show time, road, direction, and vehicles involved for
+                    1–3 likely incidents.
                   </li>
                   <li>
-                    User picks "yes, that's mine" or "none of these / not sure".
+                    User selects "this is mine" or "none of these / not sure";
+                    we still proceed on "not sure" with a slightly fuzzier link.
                   </li>
                   <li>
-                    On "not sure", wizard asks for a bit more info (time-of-day, vehicle type) but
-                    still progresses, never dead-ends.
+                    Matched incident becomes a key for later analytics and
+                    severity scoring.
                   </li>
                 </ul>
               </div>
             </article>
-          </div>
-
-          <!-- Second row (stacked) -->
-          <div class="flex flex-col gap-6 sm:gap-4">
-            <!-- Connector (vertical hint only visually via spacing) -->
 
             <!-- STEP 5 -->
             <article
-              class="step-card relative flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    5
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Role & Contact Capture
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Critical qualification step for routing
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-pink-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-pink-100 border border-pink-400/40"
                 >
-                  5
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Role & Contact Capture
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Critical qualification step for lead routing
-                  </p>
-                </div>
+                  Lead
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                Who are they (driver/passenger/etc.), were they injured, and how can we reach them?
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                We learn who they are, whether they're hurt, and if they're
+                already represented.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    Ask user's role (driver, passenger, pedestrian, family member) and injury status
-                    (yes / maybe / no).
+                    Fields: role (driver, passenger, pedestrian, family),
+                    injury status, insurance contact, and "do you already have a
+                    lawyer?"
                   </li>
                   <li>
-                    Ask whether insurance or a lawyer has contacted them yet, plus if they already
-                    have a lawyer.
+                    Personal info: name, email, phone, preferred contact
+                    method, and explicit consent for outreach.
                   </li>
                   <li>
-                    Capture name, email, phone, consent for contact. These fields power routing,
-                    prioritisation, and later reporting to clients.
+                    These inputs produce a clear lead score and determine if the
+                    user is eligible for immediate sponsor connection.
                   </li>
                 </ul>
               </div>
@@ -302,44 +376,55 @@
 
             <!-- STEP 6 -->
             <article
-              class="step-card relative flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    6
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Report Status & Delivery
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Instant, pending, or guide-only state
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-cyan-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-cyan-100 border border-cyan-400/40"
                 >
-                  6
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Report Status & Delivery
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Shows "instant", "not yet available", or "guide-only"
-                  </p>
-                </div>
+                  Value
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                This is where the perceived value is delivered and trust is won.
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                This screen pays off the promise and explains next steps
+                clearly, even when APIs can't fetch the report.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    If auto-retrieval is possible, show "Good news, your report is available" with a
-                    download/email option.
+                    If possible, we fetch the report instantly and let them view
+                    a summary and request the full PDF by email/SMS.
                   </li>
                   <li>
-                    If it's not ready yet, show a realistic timeline and offer to notify them as soon
-                    as it is.
+                    If not yet ready, we show local timelines, provide a
+                    pre-report summary, and commit to notifying them as soon as
+                    it drops.
                   </li>
                   <li>
-                    In locked-down jurisdictions, provide a personalised step-by-step guide (agency,
-                    forms, fees) so the tool still feels valuable.
+                    In manual jurisdictions, we generate a personalised "how to
+                    request your report in [City]" guide, preserving perceived
+                    value.
                   </li>
                 </ul>
               </div>
@@ -347,44 +432,55 @@
 
             <!-- STEP 7 -->
             <article
-              class="step-card relative flex-1 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group focus:outline-none"
+              class="step-card relative z-10 flex-shrink-0 w-72 snap-start rounded-2xl border border-slate-800 bg-slate-900/80 p-4 shadow-sm shadow-slate-950/60 hover:shadow-xl hover:border-blue-500/70 hover:bg-slate-900 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-blue-400/70 focus:ring-offset-2 focus:ring-offset-slate-950"
               tabindex="0"
             >
-              <header class="flex items-center gap-3 mb-2">
-                <div
-                  class="h-8 w-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-semibold"
+              <header class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-sm font-semibold shadow-lg shadow-blue-500/40"
+                  >
+                    7
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Legal Routing & Long-term Value
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Connect qualified leads & build data assets
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center rounded-full bg-lime-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-lime-100 border border-lime-400/40"
                 >
-                  7
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-slate-900">
-                    Legal Routing & Long-term Value
-                  </h3>
-                  <p class="text-xs text-slate-500">
-                    Connect high-value users to sponsors and build SEO assets
-                  </p>
-                </div>
+                  Output
+                </span>
               </header>
-              <p class="text-xs text-slate-500 mb-2">
-                Qualification signals + location drive routing to PI partners.
+
+              <p class="text-[11px] text-slate-300 mb-2">
+                Hot leads go to sponsoring firms; anonymised data feeds SEO,
+                dashboards, and pitch material.
               </p>
 
               <div
-                class="step-details mt-2 border-t border-dashed border-slate-200 pt-2 text-xs text-slate-700 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-96"
+                class="step-details mt-2 border-t border-dashed border-slate-700 pt-2 text-[11px] text-slate-200 transition-all duration-200 ease-out opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-72"
               >
-                <p class="mb-1 font-medium">What's happening here?</p>
+                <p class="mb-1 font-semibold text-slate-50">What happens:</p>
                 <ul class="list-disc list-inside space-y-1">
                   <li>
-                    If they're injured, in a supported market, and unrepresented, we offer a
-                    sponsor-attorney call, callback, or consult.
+                    If the user is injured, unrepresented, and in a covered
+                    market, they're offered an immediate call or callback from a
+                    sponsor.
                   </li>
                   <li>
-                    Regardless of lead status, we send follow-up emails/SMS for report availability,
-                    education, and reactivation.
+                    Email/SMS flows handle report updates, education, and
+                    reactivation while staying compliance-friendly.
                   </li>
                   <li>
-                    Anonymised incident and funnel data feed dashboards and SEO content: "dangerous
-                    intersections", "local crash trends", and authority-building assets for pitches.
+                    Aggregate trends (dangerous intersections, volume by
+                    weekday, etc.) become content and proof that we already
+                    own demand in a market when pitching firms.
                   </li>
                 </ul>
               </div>
@@ -393,10 +489,14 @@
         </section>
 
         <!-- Footer note -->
-        <footer class="mt-10 pt-4 border-t border-slate-200 text-xs text-slate-500">
+        <footer
+          class="mt-8 pt-4 border-t border-slate-800 text-[11px] text-slate-400"
+        >
           <p>
-            Implementation note: this is a static explainer of the UX flow, not the end-user wizard
-            itself. You can duplicate this layout and swap the cards for real forms later.
+            Implementation note: this page is a visual explainer of the UX
+            journey, not the live wizard. You can reuse the structure for
+            client decks, Loom walk-throughs, or as a blueprint for the actual
+            product screens.
           </p>
         </footer>
       </div>
