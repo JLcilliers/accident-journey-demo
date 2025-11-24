@@ -22,8 +22,8 @@
 
       .flow-canvas {
         position: relative;
-        width: 2400px;
-        height: 2100px;
+        width: 800px;
+        height: 2700px;
       }
 
       .flow-box {
@@ -1579,185 +1579,197 @@
               <div class="flow-canvas">
 
               <!-- ENTRY POINT -->
-              <div class="flow-box flow-box-start" style="left: 50px; top: 50px;">User lands on homepage</div>
-              <div class="flow-line flow-line-v" style="left: 118px; top: 90px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 113px; top: 122px;"></div>
+              <div class="flow-box flow-box-start" style="left: 330px; top: 50px;">User lands on homepage</div>
+              <div class="flow-line flow-line-v" style="left: 398px; top: 90px; height: 30px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 393px; top: 112px;"></div>
 
-              <!-- CTA BRANCH 1: Contact Team -->
-              <div class="flow-box flow-box-process" style="left: 50px; top: 150px;">User clicks "Contact our team"</div>
-              <div class="flow-line flow-line-h" style="left: 200px; top: 168px; width: 60px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 252px; top: 163px;"></div>
+              <!-- TWO CTA BRANCHES -->
+              <div class="flow-box flow-box-decision" style="left: 358px; top: 135px;">
+                <div class="flow-box-decision-inner">Choose<br/>path</div>
+              </div>
 
-              <div class="flow-box flow-box-process" style="left: 280px; top: 150px;">Live chat or callback</div>
-              <div class="flow-line flow-line-h" style="left: 430px; top: 168px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 472px; top: 163px;"></div>
+              <!-- CTA BRANCH 1: Contact Team (LEFT) -->
+              <div class="flow-label" style="left: 280px; top: 160px;">Contact</div>
+              <div class="flow-line flow-line-h" style="left: 240px; top: 173px; width: 78px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 240px; top: 168px; transform: rotate(180deg);"></div>
 
-              <div class="flow-box flow-box-end" style="left: 500px; top: 150px;">Journey ends (alternative path)</div>
+              <div class="flow-box flow-box-process" style="left: 30px; top: 155px;">Click "Contact our team"</div>
+              <div class="flow-line flow-line-v" style="left: 98px; top: 195px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 93px; top: 227px;"></div>
 
-              <!-- CTA BRANCH 2: Find Report -->
-              <div class="flow-box flow-box-process" style="left: 30px; top: 250px;">"Find your accident report" CTA</div>
-              <div class="flow-line flow-line-h" style="left: 180px; top: 268px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 222px; top: 263px;"></div>
+              <div class="flow-box flow-box-process" style="left: 30px; top: 255px;">Live chat or callback</div>
+              <div class="flow-line flow-line-v" style="left: 98px; top: 295px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 93px; top: 327px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 250px; top: 250px;">Form submit</div>
-              <div class="flow-line flow-line-v" style="left: 318px; top: 290px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 313px; top: 322px;"></div>
+              <div class="flow-box flow-box-end" style="left: 18px; top: 355px;">Journey ends (alt path)</div>
+
+              <!-- CTA BRANCH 2: Find Report (RIGHT) -->
+              <div class="flow-label" style="left: 480px; top: 160px;">Find Report</div>
+              <div class="flow-line flow-line-h" style="left: 448px; top: 173px; width: 80px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 520px; top: 168px;"></div>
+
+              <div class="flow-box flow-box-process" style="left: 548px; top: 155px;">"Find your accident report"</div>
+              <div class="flow-line flow-line-v" style="left: 616px; top: 195px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 611px; top: 227px;"></div>
+
+              <div class="flow-box flow-box-process" style="left: 570px; top: 255px;">Form submit</div>
+              <div class="flow-line flow-line-v" style="left: 638px; top: 295px; height: 50px;"></div>
+              <div class="flow-line flow-line-h" style="left: 398px; top: 345px; width: 240px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 393px; top: 337px;"></div>
 
               <!-- LOCATION CAPTURE -->
-              <div class="flow-box flow-box-process" style="left: 230px; top: 350px;">Capture location via detection</div>
-              <div class="flow-line flow-line-v" style="left: 298px; top: 390px; height: 30px;"></div>
+              <div class="flow-box flow-box-process" style="left: 300px; top: 365px;">Capture location via detection</div>
+              <div class="flow-line flow-line-v" style="left: 368px; top: 405px; height: 30px;"></div>
 
               <!-- Location detection decision -->
-              <div class="flow-box flow-box-decision" style="left: 258px; top: 435px;">
+              <div class="flow-box flow-box-decision" style="left: 328px; top: 450px;">
                 <div class="flow-box-decision-inner">Detection<br/>success?</div>
               </div>
 
-              <!-- NO: Manual fallback -->
-              <div class="flow-label" style="left: 200px; top: 460px;">No</div>
-              <div class="flow-line flow-line-h" style="left: 170px; top: 473px; width: 48px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 170px; top: 468px; transform: rotate(180deg);"></div>
+              <!-- NO: Manual fallback (LEFT) -->
+              <div class="flow-label" style="left: 260px; top: 475px;">No</div>
+              <div class="flow-line flow-line-h" style="left: 220px; top: 488px; width: 68px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 220px; top: 483px; transform: rotate(180deg);"></div>
 
-              <div class="flow-box flow-box-process" style="left: 20px; top: 455px;">Manual location input</div>
-              <div class="flow-line flow-line-v" style="left: 88px; top: 495px; height: 40px;"></div>
-              <div class="flow-line flow-line-h" style="left: 88px; top: 535px; width: 160px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 240px; top: 530px;"></div>
+              <div class="flow-box flow-box-process" style="left: 70px; top: 470px;">Manual location input</div>
+              <div class="flow-line flow-line-v" style="left: 138px; top: 510px; height: 70px;"></div>
+              <div class="flow-line flow-line-h" style="left: 138px; top: 580px; width: 230px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 360px; top: 575px;"></div>
 
-              <!-- YES: Continue -->
-              <div class="flow-label" style="left: 340px; top: 460px;">Yes</div>
-              <div class="flow-line flow-line-h" style="left: 348px; top: 473px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 390px; top: 468px;"></div>
+              <!-- YES: Continue (RIGHT) -->
+              <div class="flow-label" style="left: 460px; top: 475px;">Yes</div>
+              <div class="flow-line flow-line-v" style="left: 418px; top: 538px; height: 42px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 413px; top: 572px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 270px; top: 517px;">Capture user site</div>
-              <div class="flow-line flow-line-v" style="left: 338px; top: 557px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 333px; top: 589px;"></div>
+              <div class="flow-box flow-box-process" style="left: 350px; top: 600px;">Capture user site</div>
+              <div class="flow-line flow-line-v" style="left: 418px; top: 640px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 413px; top: 672px;"></div>
 
               <!-- INJURY ASSESSMENT -->
-              <div class="flow-box flow-box-decision" style="left: 298px; top: 612px;">
+              <div class="flow-box flow-box-decision" style="left: 378px; top: 695px;">
                 <div class="flow-box-decision-inner">Injury<br/>status?</div>
               </div>
 
-              <!-- Three branches -->
-              <div class="flow-label" style="left: 250px; top: 680px;">Injured</div>
-              <div class="flow-label" style="left: 338px; top: 680px;">Not sure</div>
-              <div class="flow-label" style="left: 420px; top: 680px;">Not injured</div>
-
-              <!-- Merge all paths -->
-              <div class="flow-line flow-line-v" style="left: 258px; top: 695px; height: 35px;"></div>
-              <div class="flow-line flow-line-v" style="left: 348px; top: 695px; height: 35px;"></div>
-              <div class="flow-line flow-line-v" style="left: 438px; top: 695px; height: 35px;"></div>
-              <div class="flow-line flow-line-h" style="left: 258px; top: 730px; width: 180px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 343px; top: 722px;"></div>
+              <div class="flow-label" style="left: 328px; top: 763px;">Injured / Not sure / Not injured</div>
+              <div class="flow-line flow-line-v" style="left: 418px; top: 783px; height: 35px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 413px; top: 810px;"></div>
 
               <!-- CONTACT COLLECTION -->
-              <div class="flow-box flow-box-process" style="left: 270px; top: 750px;">Collect contact information</div>
-              <div class="flow-line flow-line-v" style="left: 338px; top: 790px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 333px; top: 822px;"></div>
+              <div class="flow-box flow-box-process" style="left: 300px; top: 838px;">Collect contact information</div>
+              <div class="flow-line flow-line-v" style="left: 368px; top: 878px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 363px; top: 910px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 270px; top: 850px;">Validate phone with OTP</div>
-              <div class="flow-line flow-line-v" style="left: 338px; top: 890px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 333px; top: 922px;"></div>
+              <div class="flow-box flow-box-process" style="left: 300px; top: 938px;">Validate phone with OTP</div>
+              <div class="flow-line flow-line-v" style="left: 368px; top: 978px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 363px; top: 1010px;"></div>
 
               <!-- TECH STACK AND MATCHING -->
-              <div class="flow-box flow-box-critical" style="left: 220px; top: 950px;">Tech stack - fetch accident report data</div>
-              <div class="flow-line flow-line-h" style="left: 370px; top: 968px; width: 60px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 422px; top: 963px;"></div>
+              <div class="flow-box flow-box-critical" style="left: 250px; top: 1038px;">Tech stack - fetch data</div>
+              <div class="flow-line flow-line-v" style="left: 318px; top: 1078px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 313px; top: 1110px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 450px; top: 950px;">Automatic accident match</div>
-              <div class="flow-line flow-line-h" style="left: 600px; top: 968px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 642px; top: 963px;"></div>
+              <div class="flow-box flow-box-process" style="left: 250px; top: 1138px;">Automatic accident match</div>
+              <div class="flow-line flow-line-v" style="left: 318px; top: 1178px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 313px; top: 1210px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 670px; top: 950px;">Fuzzy matching</div>
-              <div class="flow-line flow-line-h" style="left: 820px; top: 968px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 862px; top: 963px;"></div>
+              <div class="flow-box flow-box-process" style="left: 280px; top: 1238px;">Fuzzy matching</div>
+              <div class="flow-line flow-line-v" style="left: 348px; top: 1278px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 343px; top: 1310px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 890px; top: 950px;">Return top 10 incidents</div>
-              <div class="flow-line flow-line-v" style="left: 958px; top: 990px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 953px; top: 1022px;"></div>
+              <div class="flow-box flow-box-process" style="left: 270px; top: 1338px;">Return top 10 incidents</div>
+              <div class="flow-line flow-line-v" style="left: 338px; top: 1378px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 333px; top: 1410px;"></div>
 
               <!-- INCIDENT SELECTION -->
-              <div class="flow-box flow-box-process" style="left: 860px; top: 1050px;">Display demo images + incident list</div>
-              <div class="flow-line flow-line-v" style="left: 928px; top: 1090px; height: 30px;"></div>
+              <div class="flow-box flow-box-process" style="left: 230px; top: 1438px;">Display demo images + list</div>
+              <div class="flow-line flow-line-v" style="left: 298px; top: 1478px; height: 30px;"></div>
 
-              <div class="flow-box flow-box-decision" style="left: 888px; top: 1135px;">
+              <div class="flow-box flow-box-decision" style="left: 258px; top: 1523px;">
                 <div class="flow-box-decision-inner">Match<br/>found?</div>
               </div>
 
-              <!-- YES path -->
-              <div class="flow-label" style="left: 970px; top: 1160px;">Yes</div>
-              <div class="flow-line flow-line-h" style="left: 978px; top: 1173px; width: 60px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1030px; top: 1168px;"></div>
+              <!-- YES path (RIGHT) -->
+              <div class="flow-label" style="left: 380px; top: 1548px;">Yes</div>
+              <div class="flow-line flow-line-h" style="left: 348px; top: 1561px; width: 80px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 420px; top: 1556px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1058px; top: 1155px;">User selects incident</div>
-              <div class="flow-line flow-line-v" style="left: 1126px; top: 1195px; height: 40px;"></div>
-              <div class="flow-line flow-line-h" style="left: 928px; top: 1235px; width: 198px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 923px; top: 1227px;"></div>
+              <div class="flow-box flow-box-process" style="left: 448px; top: 1543px;">User selects incident</div>
+              <div class="flow-line flow-line-v" style="left: 516px; top: 1583px; height: 185px;"></div>
+              <div class="flow-line flow-line-h" style="left: 298px; top: 1768px; width: 218px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 293px; top: 1760px;"></div>
 
-              <!-- NO path -->
-              <div class="flow-label" style="left: 870px; top: 1230px;">No</div>
-              <div class="flow-line flow-line-v" style="left: 928px; top: 1225px; height: 20px;"></div>
+              <!-- NO path (LEFT) -->
+              <div class="flow-label" style="left: 180px; top: 1548px;">No</div>
+              <div class="flow-line flow-line-h" style="left: 120px; top: 1561px; width: 98px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 120px; top: 1556px; transform: rotate(180deg);"></div>
 
-              <div class="flow-box flow-box-critical" style="left: 820px; top: 1265px;">Queue for human lookup</div>
-              <div class="flow-line flow-line-v" style="left: 888px; top: 1305px; height: 30px;"></div>
+              <div class="flow-box flow-box-critical" style="left: 10px; top: 1543px;">Queue for human lookup</div>
+              <div class="flow-line flow-line-v" style="left: 78px; top: 1583px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 73px; top: 1615px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 820px; top: 1355px;">Show processing time & notification</div>
-              <div class="flow-line flow-line-v" style="left: 888px; top: 1395px; height: 40px;"></div>
-              <div class="flow-line flow-line-h" style="left: 888px; top: 1435px; width: 238px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1118px; top: 1430px;"></div>
+              <div class="flow-box flow-box-process" style="left: 0px; top: 1643px;">Show processing time</div>
+              <div class="flow-line flow-line-v" style="left: 68px; top: 1683px; height: 85px;"></div>
+              <div class="flow-line flow-line-h" style="left: 68px; top: 1768px; width: 230px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 290px; top: 1763px;"></div>
 
               <!-- QUALIFICATION CHECKS -->
-              <div class="flow-box flow-box-process" style="left: 1146px; top: 1417px;">Check injury status</div>
-              <div class="flow-line flow-line-h" style="left: 1296px; top: 1435px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1338px; top: 1430px;"></div>
+              <div class="flow-box flow-box-process" style="left: 268px; top: 1788px;">Check injury status</div>
+              <div class="flow-line flow-line-v" style="left: 336px; top: 1828px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 331px; top: 1860px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1366px; top: 1417px;">Check representation</div>
-              <div class="flow-line flow-line-h" style="left: 1516px; top: 1435px; width: 50px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1558px; top: 1430px;"></div>
+              <div class="flow-box flow-box-process" style="left: 268px; top: 1888px;">Check representation</div>
+              <div class="flow-line flow-line-v" style="left: 336px; top: 1928px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 331px; top: 1960px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1586px; top: 1417px;">Check geographic eligibility</div>
-              <div class="flow-line flow-line-v" style="left: 1654px; top: 1457px; height: 40px;"></div>
+              <div class="flow-box flow-box-process" style="left: 238px; top: 1988px;">Check geographic eligibility</div>
+              <div class="flow-line flow-line-v" style="left: 306px; top: 2028px; height: 40px;"></div>
 
-              <div class="flow-box flow-box-decision" style="left: 1614px; top: 1512px;">
+              <div class="flow-box flow-box-decision" style="left: 266px; top: 2083px;">
                 <div class="flow-box-decision-inner">Qualified?</div>
               </div>
 
-              <!-- NOT QUALIFIED path -->
-              <div class="flow-label" style="left: 1560px; top: 1600px;">No</div>
-              <div class="flow-line flow-line-v" style="left: 1654px; top: 1600px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 1649px; top: 1632px;"></div>
+              <!-- NOT QUALIFIED path (LEFT) -->
+              <div class="flow-label" style="left: 190px; top: 2108px;">No</div>
+              <div class="flow-line flow-line-h" style="left: 120px; top: 2121px; width: 106px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 120px; top: 2116px; transform: rotate(180deg);"></div>
 
-              <div class="flow-box flow-box-critical" style="left: 1586px; top: 1660px;">Mark as not qualified</div>
-              <div class="flow-line flow-line-v" style="left: 1654px; top: 1700px; height: 30px;"></div>
+              <div class="flow-box flow-box-critical" style="left: 20px; top: 2103px;">Mark not qualified</div>
+              <div class="flow-line flow-line-v" style="left: 88px; top: 2143px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 83px; top: 2175px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1586px; top: 1750px;">Skip CRM routing</div>
-              <div class="flow-line flow-line-v" style="left: 1654px; top: 1790px; height: 30px;"></div>
+              <div class="flow-box flow-box-process" style="left: 20px; top: 2203px;">Skip CRM routing</div>
+              <div class="flow-line flow-line-v" style="left: 88px; top: 2243px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 83px; top: 2275px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1586px; top: 1840px;">Show basic free summary</div>
-              <div class="flow-line flow-line-v" style="left: 1654px; top: 1880px; height: 30px;"></div>
+              <div class="flow-box flow-box-process" style="left: 10px; top: 2303px;">Show basic free summary</div>
+              <div class="flow-line flow-line-v" style="left: 78px; top: 2343px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 73px; top: 2375px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1566px; top: 1930px;">Offer paid full report or free report</div>
-              <div class="flow-line flow-line-v" style="left: 1634px; top: 1970px; height: 50px;"></div>
-              <div class="flow-line flow-line-h" style="left: 1634px; top: 2020px; width: 236px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1862px; top: 2015px;"></div>
+              <div class="flow-box flow-box-process" style="left: 5px; top: 2403px;">Offer paid/free report</div>
+              <div class="flow-line flow-line-v" style="left: 73px; top: 2443px; height: 85px;"></div>
+              <div class="flow-line flow-line-h" style="left: 73px; top: 2528px; width: 285px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 350px; top: 2523px;"></div>
 
-              <!-- QUALIFIED path -->
-              <div class="flow-label" style="left: 1710px; top: 1537px;">Yes</div>
-              <div class="flow-line flow-line-h" style="left: 1704px; top: 1550px; width: 60px;"></div>
-              <div class="flow-arrow flow-arrow-right" style="left: 1756px; top: 1545px;"></div>
+              <!-- QUALIFIED path (RIGHT) -->
+              <div class="flow-label" style="left: 380px; top: 2108px;">Yes</div>
+              <div class="flow-line flow-line-h" style="left: 356px; top: 2121px; width: 80px;"></div>
+              <div class="flow-arrow flow-arrow-right" style="left: 428px; top: 2116px;"></div>
 
-              <div class="flow-box flow-box-special" style="left: 1784px; top: 1532px;">Package lead data</div>
-              <div class="flow-line flow-line-v" style="left: 1852px; top: 1572px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 1847px; top: 1604px;"></div>
+              <div class="flow-box flow-box-special" style="left: 456px; top: 2103px;">Package lead data</div>
+              <div class="flow-line flow-line-v" style="left: 524px; top: 2143px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 519px; top: 2175px;"></div>
 
-              <div class="flow-box flow-box-critical" style="left: 1784px; top: 1632px;">Send to CRM</div>
-              <div class="flow-line flow-line-v" style="left: 1852px; top: 1672px; height: 40px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 1847px; top: 1704px;"></div>
+              <div class="flow-box flow-box-critical" style="left: 466px; top: 2203px;">Send to CRM</div>
+              <div class="flow-line flow-line-v" style="left: 534px; top: 2243px; height: 40px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 529px; top: 2275px;"></div>
 
-              <div class="flow-box flow-box-process" style="left: 1764px; top: 1732px;">Trigger SMS & email follow-up</div>
-              <div class="flow-line flow-line-v" style="left: 1832px; top: 1772px; height: 248px;"></div>
-              <div class="flow-arrow flow-arrow-down" style="left: 1827px; top: 2012px;"></div>
+              <div class="flow-box flow-box-process" style="left: 436px; top: 2303px;">Trigger SMS & email follow-up</div>
+              <div class="flow-line flow-line-v" style="left: 504px; top: 2343px; height: 185px;"></div>
+              <div class="flow-line flow-line-h" style="left: 358px; top: 2528px; width: 146px;"></div>
+              <div class="flow-arrow flow-arrow-down" style="left: 353px; top: 2520px;"></div>
 
               <!-- FINAL CONVERGENCE -->
-              <div class="flow-box flow-box-end" style="left: 1890px; top: 2002px;">Journey complete - Report delivered</div>
+              <div class="flow-box flow-box-end" style="left: 270px; top: 2548px;">Journey complete - Report delivered</div>
 
               </div>
             </div>
